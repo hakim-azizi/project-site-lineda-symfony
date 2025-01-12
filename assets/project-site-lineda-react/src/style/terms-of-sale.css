@@ -1,0 +1,25 @@
+.condition{
+    width:calc(100vw - 1rem);
+}
+
+.condition>section{
+    width:calc(100vw - 1rem);
+    justify-content: center;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.condition>section>p,
+.condition>section>h2{
+    width:100%;
+}
+
+.condition>section>article{
+    width: calc(25vw - 4rem);
+    min-width: 15.625rem;
+}
+
+.close-this-windows{
+    font-weight: bold;
+}

@@ -1,0 +1,61 @@
+form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 1rem;
+	margin:0 auto 1rem auto;
+	width: 50%;
+	min-width: 15.625rem;
+}
+
+form>p,
+label{
+    border-bottom: 1px solid var(--dark-color);
+    border-top: 1px solid var(--dark-color);
+}
+
+form>p{
+    margin: 0;
+}
+
+input,
+textarea{
+    background: var(--light-color);
+}
+select,
+textarea,
+label,
+input{width:100%}
+
+select:focus,
+textarea:focus,
+input:focus {
+    outline:  none;
+}
+
+textarea{
+    height: 18.75rem;
+}
+
+select,
+input,
+textarea,
+button{
+    padding: .5rem;
+    border:none;
+}
+
+option{width:100%}
+
+form>button{
+    background: var(--dark-color);
+    color: var(--light-color);
+    font-weight: bold;
+    border-radius: 1rem;
+}
+
+form>button:hover{
+    background: var(--light-color);
+    color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+}

@@ -1,0 +1,23 @@
+.home{
+	/* overflow: hidden;
+	height: 20.8125rem; */
+    margin:auto;
+}
+
+.visual{
+    
+    height:auto;
+    min-width: 15.625rem;
+}
+
+@media (max-width: 800px){
+    .visual{
+        width:calc(100vw - 3rem);
+    }
+}
+
+@media (min-width: 801px){
+    .visual{
+    width:calc(100vw - 18.725rem);
+}
+}

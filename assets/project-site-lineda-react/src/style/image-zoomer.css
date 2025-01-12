@@ -1,0 +1,36 @@
+#img-zoomer-box {
+	min-width: 15.625rem;
+	max-width: 35.625rem;
+	width : calc(100% / 3);
+	height: auto;
+	position: relative;
+	margin: 1rem auto;
+}
+
+#img-1 {
+	width: 100%;
+	height: auto;
+}
+
+#img-zoomer-box:hover, #img-zoomer-box:active {
+	cursor: crosshair;
+	display: block;
+}
+
+#img-zoomer-box:hover #img-2, #img-zoomer-box:active #img-2 {
+	opacity: 1;
+}
+#img-2 {
+	width: 10.625rem;
+	height: 10.625rem;
+	background-image: url('../../public/asset/pictures/loader.gif') no-repeat #FFF;
+	box-shadow: 0 .3125 .625rem -.125rem rgba(0,0,0,0.3);
+	pointer-events: none;
+	position: absolute;
+	opacity: 0;
+	border: .25rem solid #F5F5F5;
+	z-index: 99;
+	border-radius: 100%;
+	display: block;
+	transition: opacity .2s;
+}

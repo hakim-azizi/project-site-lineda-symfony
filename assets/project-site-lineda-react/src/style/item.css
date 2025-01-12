@@ -1,0 +1,40 @@
+.picture{
+	display: block !important;
+	float: left !important;
+	margin-right: .5rem !important;
+	width: 35% !important;
+	min-width: 15.625rem !important;
+	height:auto !important;
+}
+
+.picture>figure>img{
+		width:100%;
+		height:auto;
+}
+
+.valid-cart{
+	position:fixed;
+	top: 50vh;
+	left: calc(50vw - 9.375rem);
+	display:none;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin:auto;
+	width:18.75rem;
+	z-index: 1;
+	background: #443f40;
+}
+
+.valid-cart>button{
+    background: var(--light-color);
+    color: #443f40;
+    font-weight: bold;
+    border-radius: 1rem;
+	margin: .5rem 0;
+}
+
+.valid-cart>button:hover{
+    background: #443f40;
+    color: var(--light-color);
+    border: 1px solid var(--light-color);
+}

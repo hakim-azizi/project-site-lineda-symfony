@@ -1,0 +1,30 @@
+section>.item{
+	width: 50%;
+	min-width: 15.625rem;
+	margin: 0 auto 1rem auto;
+
+	}
+
+section>.item>li
+{
+	margin-top: 1rem;
+	padding:1rem;
+	border: 1px solid var(--dark-color);
+	border-radius: 1rem;
+	display:flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+section>.item>li>picture{
+	width:50%;
+}
+
+section>.item>li>picture>img{
+	border-radius: 1rem;
+	width:100%;
+}
+
+.cart>ul{
+	margin: 1rem;
+}
