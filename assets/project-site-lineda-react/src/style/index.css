@@ -1,0 +1,5 @@
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	scrollbar-width: thin;
+	width: calc(100vw - 1.1rem);
+}
