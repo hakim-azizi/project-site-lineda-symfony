@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background: #443f40;">
+</body>
+<script>
+    // Simuler les valeurs récupérées via $_GET
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const price = Number(urlParams.get('price'));
+    const quantity = Number(urlParams.get('quantity'));
+
+    // Vérification des paramètres
+    if (!name || price===0 || quantity===0 || !/^[a-zA-Z0-9 éèêëÊËàâäÂÄîïÎÏûùüÛÜôöÔÖç]{0,100}$/.test(name) || !/^[0-9]{0,100}$/.test(price) || !/^[0-9]{0,100}$/.test(quantity)) {
+        document.body.innerHTML = "<p style='color:#ff0000'>ERROR !!!</p>";
+    } else {
+        document.body.innerHTML = `name => ${name}<br>price => ${price}<br>quantity => ${quantity}`;
+        
+        // Déterminer si c'est singulier ou pluriel
+        const singular = quantity > 1 ? 'ont' : 'a';
+        
+        // Calculer le total
+        const total = price * quantity;
+        console.log('price => ',price, ', quantity => ', quantity, ' total => ',  total);
+        
+        // Affichage du message
+        document.body.innerHTML = `
+            <span style='color:#FFF'>
+                ${quantity} ${name} ${singular} bien été ajouté à votre panier pour un montant de ${total} &euro;
+            </span>
+        `;
+    }
+</script>
+</html>
