@@ -1,0 +1,6 @@
+# config/routes/routerapi.yaml
+
+api_contents:
+    path: /api/contents
+    controller: App\Controller\Api\ContentsController::getContents
+    methods: [GET]

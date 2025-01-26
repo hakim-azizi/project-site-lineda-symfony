@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useState, ReactNode } from 'react';
+import process from 'process';
 
 export type ItemProps = {
 	id ?: string;
@@ -64,9 +65,9 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({ children }) =>
 		keywords:[],
 		best_seller:[]
 	});
-
+console.log('process.env => ',`${process.env.REACT_APP_API_URL}/api/contents.json`)
 	useEffect(() => {
-		fetch(`${process.env.REACT_APP_API_URL}/api?api=contents.json`)
+		fetch(`https://127.0.0.1:8000/api/contents.json`)
 		.then((response) => response.json())
 		.then((data) => {
 			setContent(data);
