@@ -19,7 +19,7 @@
         "watch": "encore dev --watch",
         "build": "encore production --progress",
         "symfony": "symfony server:start",
-        "start": "concurrently \"npm run watch\" \"npm run symfony\" \"npm run dev-server\""
+        "start": "concurrently -c green,yellow,red -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm run watch\" \"npm run symfony\" \"npm run dev-server\""
     },
     "dependencies": {
         "@babel/preset-react": "^7.26.3",
